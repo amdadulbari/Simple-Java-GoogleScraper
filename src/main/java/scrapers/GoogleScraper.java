@@ -12,10 +12,10 @@ import java.io.IOException;
  * Created at 25/7/18
  */
 public class GoogleScraper {
-    public void scrapResult(String query){
+    public void scrapResult(String query,int count){
         Document doc = null;
         try {
-            doc = Jsoup.connect("https://www.google.com/search?q="+query).get();
+            doc = Jsoup.connect("https://www.google.com/search?q="+query+"&num="+count).get();
             System.out.println(doc.title());
             Elements newsHeadlines = doc.select("h3.r>a");
             for (Element headline:newsHeadlines) {

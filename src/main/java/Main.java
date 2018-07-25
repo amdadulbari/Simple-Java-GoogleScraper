@@ -7,6 +7,6 @@ import scrapers.GoogleScraper;
 public class Main {
     public static void main(String[] args) {
         GoogleScraper googleScraper = new GoogleScraper();
-        googleScraper.scrapResult("medium");
+        googleScraper.scrapResult("medium",50);
     }
 }
